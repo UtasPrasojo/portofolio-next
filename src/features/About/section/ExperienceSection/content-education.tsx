@@ -7,29 +7,25 @@ export const ContentEducation = () => {
           {" "}
           @
           <a
-            href="https://informatika.ums.ac.id"
+            href="https://d3ti.vokasi.uns.ac.id/"
             target="_blank"
             rel="noreferrer"
             className="text-underline"
           >
-            Muhammadiyah Surakarta University
+            Sebelas Maret University
           </a>
         </span>
       </h3>
-      <p className="pb-5 font-mono text-sm lg:text-base">Aug 2020 - Present</p>
+      <p className="pb-5 font-mono text-sm lg:text-base">Aug 2022 - Present</p>
       <ul className="flex list-inside list-disc flex-col gap-4 text-sm leading-relaxed lg:text-base">
         <li>
-          Activities and Associations: Himpunan Mahasiswa Teknik Informatika and
-          Event Committee.
+          Activities and Associations: Himpunan Mahasiswa D3 Teknik Informatika and
+          Badan Eksekutif Mahasiswa.
         </li>
         <li>
-          Becoming the #1 Hokage of GDSC UMS, core member of the web development
-          team, active contribution in the first-year development of GDSC UMS.
+          Served as the Design Coordinator for Smart IT Festival 2024: Empowering Digital Business for Gen Z, a technology event supported by NVIDIA as the main sponsor. The event featured Anjas Maradita as the keynote speaker, discussing the role of AI in everyday life.
         </li>
-        <li>
-          Graduated with a final thesis building INNOVATION OF ACADEMIC
-          INFORMATION SYSTEM - A REACT NATIVE-BASED APPLICATION
-        </li>
+       
       </ul>
     </div>
   );
