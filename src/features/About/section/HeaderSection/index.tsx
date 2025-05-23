@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import Image from "next/image";
-import ulin from "@images/ulin.webp";
+import utas from "@images/utas.jpg";
 
 const HeaderSection: FC = () => {
   return (
@@ -25,19 +25,12 @@ const HeaderSection: FC = () => {
         </div>
         <div className="flex flex-col gap-5 pr-0 text-sm md:text-base lg:pr-10 xl:pr-0">
           <p data-aos="zoom-in-right">
-            I'm Aldilla Ulinnaja, a web developer specializing in the{" "}
-            <span className="text-accent">TypeScript + React ecosystem</span>,
-            with solid experience building modern, scalable applications using
-            React, Next.js, and Node.js. With over 3 years of hands-on
-            experience in the industry, I thrive at the intersection of
-            intuitive UI and clean, maintainable code.
+            I'm  Utas Prasojo, a web developer specializing in the{" "}
+            <span className="text-accent">Vue + React Ecosystem</span>,
+            Building scalable applications using Vue and Vite. With over 1 years of experience in the industry, I’m continuously learning Next.js and focused on writing clean, maintainable code while delivering intuitive user interfaces.
           </p>
           <p data-aos="zoom-in-right" data-aos-delay="100">
-            My core strength lies in frontend development—designing responsive,
-            high-performing interfaces using React, Next.js, Tailwind, Zustand,
-            and other modern tools. I also work comfortably on the backend using
-            Node.js, NextJs, and Bun, enabling me to develop fullstack
-            applications end-to-end.
+            My core strength lies in frontend development—building responsive, high-performing interfaces using Vue, Vite, Tailwind CSS, and Next.js. I'm also expanding my backend skills by learning NestJS and Laravel, aiming to support end-to-end fullstack application development.
           </p>
           <p data-aos="zoom-in-right" data-aos-delay="200">
             From internal tools to production-ready platforms, I've contributed
@@ -60,8 +53,8 @@ const HeaderSection: FC = () => {
       >
         <div className="grayscale transition-all duration-500 hover:grayscale-0">
           <Image
-            src={ulin}
-            alt="ulin"
+            src={utas}
+            alt="utas"
             height={1000}
             className="scale-50 lg:scale-100 2xl:scale-75"
           />
