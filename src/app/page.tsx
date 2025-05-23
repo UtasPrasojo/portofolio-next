@@ -2,9 +2,9 @@ import type { FC } from "react";
 import Home from "@/features/Home";
 
 export const metadata = {
-  title: "Ulinnaja Aldi",
+  title: "Utas Prasojo",
   description:
-    "Ulinnaja Aldi is a Front-End software engineer specializes in building (and sometimes designing) amazing and new digital experiences.",
+    "Utas Prasojo is a Front-End Developer focused on building high-quality, user-friendly digital interfaces and seamless web experiences.",
 };
 
 const Homepage: FC = () => {
