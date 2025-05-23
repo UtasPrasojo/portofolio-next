@@ -13,7 +13,7 @@ const HeaderSection: FC = () => {
         className="pb-1 text-4xl font-semibold text-secondary md:mt-0 md:pb-4 md:text-5xl lg:text-6xl"
         data-aos="fade-up"
       >
-        Ulinnaja Aldi.
+        Utas Prasojo.
       </h1>
       <h1
         className="pb-4 text-4xl font-semibold text-primary md:pb-8 md:text-5xl lg:text-6xl"
@@ -25,10 +25,7 @@ const HeaderSection: FC = () => {
         className="w-full text-sm leading-relaxed text-primary md:w-[640px] md:text-base"
         data-aos="zoom-in-up"
       >
-        I'm a software engineer with over three years of experience, primarily
-        focused on web development and specializing in TypeScript. I am
-        passionate about staying current with the latest industry advancements
-        and continuously enhancing my skills.
+       I'm a software engineer with over three years of experience, including internships at several web development companies. I specialize in building modern web applications using Vue, Vite, TypeScript, and Next.js. Passionate about continuous learning, I strive to stay up-to-date with the latest technologies to grow both professionally and personally.
       </p>
       <div
         className="mt-10 text-sm md:mt-14"
@@ -37,11 +34,11 @@ const HeaderSection: FC = () => {
       >
         <a
           className="rounded-[4px] border-2 border-accent px-7 py-5 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
-          href="https://drive.google.com/drive/folders/1QoujbRghInMFjV5ECmudG3Mho-aOdngI?usp=sharing"
+          href="https://drive.google.com/drive/folders/1IjCBhzgYSWyzRJ5Yke-g_iTrIoKSiK8p?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >
-          <button>View my cv here!</button>
+          <button>View my CV here!</button>
         </a>
       </div>
     </section>

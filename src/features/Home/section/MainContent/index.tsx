@@ -23,17 +23,16 @@ const MainContent: FC = () => {
           data-aos="zoom-in-up"
           data-aos-duration="300"
         >
-          Delivering modern,
+          Crafting seamless,
           <br />
-          cohensive & instuitive web solution.
+          modern & intuitive web experiences.
         </h2>
         <p
           className="text-sm text-primary md:text-base"
           data-aos="fade-up"
           data-aos-duration="300"
         >
-          I enjoy designing meaningful experiences for brands & businesses to
-          help them serve their target users.
+          I’m passionate about crafting impactful digital experiences that empower brands to better serve and engage their audiences.
         </p>
       </div>
       <div className="bg-base-100 absolute z-0 m-auto h-[600px] w-[350px] opacity-25 md:w-[672px] lg:w-[825px] xl:w-[1080px]">

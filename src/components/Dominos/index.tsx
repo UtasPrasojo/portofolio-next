@@ -11,7 +11,7 @@ const Dominos: FC = () => {
     <>
       <Spline
         onLoad={() => setLoading(false)}
-        scene="https://prod.spline.design/BJjm9TZpZw1fn-BD/scene.splinecode"
+        scene="https://my.spline.design/3dtextbluecopy-hJX1EW97UfRZIOykfmUadrCW/"
       />
       {loading && (
         <div
