@@ -468,7 +468,7 @@ export const DATA_ORGANIZATION: IDATA_ORGANIZATION[] = [
     title: "Staff of General Treasurer",
     url: "https://www.instagram.com/emailkompuns/",
     organization: "EMAILKOMP UNS",
-    date: "Apr 2023 - Feb 2024",
+    date: "Jan 2024 - Jan 2025",
     description: (
       <>
         <li>
@@ -483,7 +483,7 @@ export const DATA_ORGANIZATION: IDATA_ORGANIZATION[] = [
     title: "Design Coordinator",
     url: "https://www.instagram.com/smartitfestofficial/",
     organization: "SMART IT FESTIVAL",
-    date: "Dec 2020 - Dec 2022",
+    date: "May 2024 - March 2025",
     description: (
       <>
         <li>
