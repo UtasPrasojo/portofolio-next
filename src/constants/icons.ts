@@ -40,6 +40,8 @@ import formikIcon from "@icons/formik.png";
 import postgreeIcon from "@icons/postgresql.svg";
 import pnpmIcon from "@icons/pnpm.svg";
 import vueIcon from "@icons/vue.svg";
+import naiveui from "@icons/naiveui.svg";
+import flutter from "@icons/flutter.svg";
 
 const ICONS = {
   // 1. Programming Languages
@@ -49,6 +51,7 @@ const ICONS = {
   html5: htmlIcon,
   css3: cssIcon,
   js: jsIcon,
+  flutter:flutter,
 
   // 2. Styling / UI Frameworks
   tailwind: tailwindIcon,
@@ -56,6 +59,7 @@ const ICONS = {
   materialUI: materialUIIcon,
   sass: sassIcon,
   shadcn: shadcnIcon,
+  naiveUI: naiveui,
 
   // 3. JavaScript Frameworks & Libraries
   react: reactIcon,
