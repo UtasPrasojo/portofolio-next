@@ -450,76 +450,46 @@ export const DATA_WORK_EXPERIENCE: IDATA_WORK_EXPERIENCE[] = [
 
 export const DATA_ORGANIZATION: IDATA_ORGANIZATION[] = [
   {
-    title: "Head of Department Web Development ",
-    url: "https://www.instagram.com/gdsc_ums/",
-    organization: "Google DSC Universitas Muhammadiyah Surakarta",
-    date: "Aug 2023 - Jun 2024",
+    title: "Directorate General of Branding and Communication",
+    url: "https://www.instagram.com/bemsvuns",
+    organization: "BEM SV UNS 2024",
+    date: "Dec 2023 - Dec 2024",
     description: (
       <>
         <li>
-          Instrumental in developing GDSC UMS during its inaugural year, I
-          played a key role in establishing and growing the community by leading
-          a team in implementing innovative web development strategies,
-          fostering engagement, and collaborating with cross-functional teams to
-          organize and execute impactful events.
+          Create and manage designs needed for social media or internal purposes
+          of BEM SV UNS, as well as assist other ministries if they request
+          design support.
         </li>
       </>
     ),
   },
   {
-    title: "Staff of Media and Publications",
-    url: "https://www.instagram.com/genbi_solo/?hl=id",
-    organization: "GENBI SOLO",
+    title: "Staff of General Treasurer",
+    url: "https://www.instagram.com/emailkompuns/",
+    organization: "EMAILKOMP UNS",
     date: "Apr 2023 - Feb 2024",
     description: (
       <>
         <li>
-          Being selected as one of the recipients of the Bank Indonesia
-          Scholarship in 2023 is a source of pride for myself. Additionally,
-          Bank Indonesia runs a program called the "Generasi Baru Indonesia"
-          (Genbi), which aims to cultivate a young generation with leadership
-          qualities, creativity, innovation, and integrity.
+          Responsible for managing the inflow and outflow of funds within the
+          organization, ensuring financial availability to support the smooth
+          execution of all programs and activities.
         </li>
       </>
     ),
   },
   {
-    title: "Staff of Interest and Talent",
-    url: "https://www.instagram.com/himatifums/",
-    organization: "HIMATIF UMS",
+    title: "Design Coordinator",
+    url: "https://www.instagram.com/smartitfestofficial/",
+    organization: "SMART IT FESTIVAL",
     date: "Dec 2020 - Dec 2022",
     description: (
       <>
         <li>
-          In the Student Association of Informatics Engineering at UMS
-          (HIMATIF), I hold a position as the coordinator of the Interest and
-          Talent Division, which oversees various work programs such as
-          Himatif's social media management, Himatif Portable Club (HPC),
-          Profile Video creation, Parade of Informatics Engineering (PARTI), and
-          UNCORE Digital Magazine.
-        </li>
-        <li>
-          One of the biggest events is the{" "}
-          <a
-            href="https://www.instagram.com/parti.ums/"
-            className="text-underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Parade of Informatics Engineering
-          </a>
-          (PARTI), where I served as the Head of Publication and Documentation,
-          responsible for organizing all the event's visual documentation and
-          preparations, including photos, videos,{" "}
-          <a
-            href="https://www.instagram.com/p/CiZACw0JXmC/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-underline"
-          >
-            3D mascot
-          </a>
-          , and media streaming.
+          Responsible for managing and creating designs for the Smart IT
+          Festival event, as well as assisting other divisions with design needs
+          such as posters, covers, and other visual materials.
         </li>
       </>
     ),
