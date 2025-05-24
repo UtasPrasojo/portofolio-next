@@ -1,4 +1,5 @@
 // Project Images
+import makepetantuma from "@images/makepetantuma.png";
 import mulih from "@images/mulih.webp";
 import travel from "@images/travel.webp";
 import bookshelf from "@images/bookshelf.webp";
@@ -6,7 +7,7 @@ import notes from "@images/notes.webp";
 import treede from "@images/3d.webp";
 import abinawa from "@images/abinawa.webp";
 import inpoums from "@images/inpoums.webp";
-import portfolio_v1 from "@images/portfolio-v1.webp";
+// import portfolio_v1 from "@images/portfolio-v1.webp";
 import bertumbuh from "@images/bertumbuh.webp";
 import coffe_bean from "@images/coffe-bean.webp";
 import dapbunda from "@images/dapbunda.webp";
@@ -128,12 +129,12 @@ const stacks: Record<string, IStack> = {
 const projects = [
   {
     id: 1,
-    name: "Mulih!",
-    desc: "My first project was created using HTML, CSS, and JavaScript. This website was created to fulfill the final assignment for the Basics of Web Programming course from Dicoding ⭐5.",
-    image: mulih,
-    web: "https://mulih.netlify.app/",
-    repo: "https://github.com/ulinnajaaldi/Dicoding-Mulih",
-    stack: "HTML, CSS, JavaScript, Responsive Web Design",
+    name: "Make Petan Tuma",
+    desc: "A web-based data collection system for persons with disabilities and the elderly, developed for the Department of Population and Civil Registration (Disdukcapil) of Sukoharjo during an internship program.",
+    image: makepetantuma,
+    web: "https://rikiadhin.my.id/petan/",
+    repo: "https://github.com/UtasPrasojo/project-based-learning-dukcapil-skh",
+    stack: "HTML, CSS, React, Responsive Web Design",
     gif: "",
   },
   {
@@ -196,16 +197,16 @@ const projects = [
     stack: "React, React-Icons, React-Router, Rest API, TailwindCSS, DaisyUI",
     gif: notesGif,
   },
-  {
-    id: 8,
-    name: "Portfolio",
-    desc: "My first personal portfolio!! I designed it by combining different ideas from various sources. It also has a secret game that you can play on your desktop. Can you find it? 🛸",
-    image: portfolio_v1,
-    web: "https://ulinnaja-aldi.vercel.app/",
-    repo: "https://github.com/ulinnajaaldi/portofolio",
-    stack: "NextJS, TailwindCSS, ThreeJS, React-spline",
-    gif: portfolioGif,
-  },
+  // {
+  //   id: 8,
+  //   name: "Portfolio",
+  //   desc: "My first personal portfolio!! I designed it by combining different ideas from various sources. It also has a secret game that you can play on your desktop. Can you find it? 🛸",
+  //   image: portfolio_v1,
+  //   web: "https://ulinnaja-aldi.vercel.app/",
+  //   repo: "https://github.com/ulinnajaaldi/portofolio",
+  //   stack: "NextJS, TailwindCSS, ThreeJS, React-spline",
+  //   gif: portfolioGif,
+  // },
   {
     id: 9,
     name: "Bertumbuh (Slice)",
