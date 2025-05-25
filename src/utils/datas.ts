@@ -19,6 +19,8 @@ import beeGenius from "@images/bee-genius.png";
 import spideyKick from "@images/spidey-kick.png";
 import midgess from "@images/midgess.png";
 import silapar from "@images/silapar.png";
+import doctor from "@images/doctorPortal.png";
+
 
 // Gif Images
 import dapbundaGif from "@gif/dapbunda.gif";
@@ -188,6 +190,15 @@ const projects = [
     web: "https://drive.google.com/file/d/1q-YMVgzHcupe7SIc8FfH8Qo4tjtX2EhP/view",
     repo: "https://github.com/UtasPrasojo/silapar-cms-fe",
     stack: "dart, html. css, flutter, Laravel, MySql, php",
+  },
+   {
+    id: 5,
+    name: "Doctor Portal",
+    desc: "This project involves the development of a doctor data management website designed to streamline the scheduling and organization of medical professionals. The system allows administrators to efficiently manage doctors’ profiles, assign their working hours, and allocate consultation rooms. By centralizing this information in a user-friendly web interface, the platform enhances coordination within healthcare facilities, reduces scheduling conflicts, and supports better resource allocation for improved patient care.",
+    image: doctor,
+    web: "https://github.com/UtasPrasojo/doctor-portal-java",
+    repo: "https://github.com/UtasPrasojo/doctor-portal-java",
+    stack: "java",
   },
 ];
 
