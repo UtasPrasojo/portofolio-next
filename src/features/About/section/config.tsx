@@ -576,6 +576,16 @@ export const DATA_AWARDS: IDATA_AWARDS[] = [
           Won 3rd place in a UI/UX Design competition for a website focused on
           monitoring stunting in toddlers and pregnant women.
         </li>
+        <p>
+          <a
+            href="https://drive.google.com/file/d/1ePYXQg4aHgdX0IdieF2bhw_FAOzavdvm/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-underline"
+          >
+            Certificate
+          </a>
+        </p>
       </>
     ),
   },
@@ -594,8 +604,17 @@ export const DATA_AWARDS: IDATA_AWARDS[] = [
           built a monitoring website for agricultural data using React.js. The
           target market for this tool is millennial farmers.
         </li>
+         <p>
+          <a
+            href="https://drive.google.com/file/d/1J5L8x3ODlnIWLhLq6SsWIzf4137mZgC9/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-underline"
+          >
+            Certificate
+          </a>
+        </p>
       </>
     ),
   },
- 
 ];
