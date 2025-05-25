@@ -6,101 +6,86 @@ export const ContentCertification = () => {
   const vendorList = [
     {
       type: "Course",
-      name: "Dicoding",
-      link: "https://www.dicoding.com",
+      name: "Cisco",
+      link: "https://www.cisco.com/",
       certificate: [
         {
-          name: "Front-End Web Developer Expert",
-          link: "https://www.dicoding.com/certificates/RVZKOMWKQPD5",
+          name: "CCNAv7: Introduction to Networks",
+          link: "https://drive.google.com/file/d/1SSewmzoNq0LosUQ-iuMkUApyHMpIEqQ6/view?usp=sharing",
         },
         {
-          name: "Intermediate Front-End Web Tools",
-          link: "https://www.dicoding.com/certificates/NVP7ONEYRPR0",
+          name: "Introduce Internet of Things",
+          link: "https://drive.google.com/file/d/1ZgthtEc-U1DqFfaBpxvH0jZ8RZRjtFFp/view?usp=sharing",
+        },
+       
+      ],
+    },
+    {
+      type: "Course",
+      name: "Oracle",
+      link: "https://www.oracle.com/",
+      certificate: [
+        {
+          name: "Java Fundamentals",
+          link: "https://drive.google.com/file/d/1iE7qqO5-NuZScrPdrctq3g8ixnrMf_NS/view?usp=drive_link",
+        },
+    
+      ],
+    },
+    {
+      type: "Course",
+      name: "RedHat",
+      link: "https://www.redhat.com/en",
+      certificate: [
+        {
+          name: "Red Hat System Administration II (RH134)",
+          link: "https://drive.google.com/file/d/1ppQFSTYPZv5PCALHlEqCHxp3H5dlRZUL/view?usp=sharing",
         },
         {
-          name: "Fundamental Web Applications with React",
-          link: "https://www.dicoding.com/certificates/0LZ0GGLJ0X65",
+          name: "Red Hat OpenStack Administration I: Core Operations for Domain Operators (CL110)",
+          link: "https://drive.google.com/file/d/183FN7Vll4_qS58GJN7g0aG-w0EHTmAze/view?usp=sharing",
         },
         {
-          name: "Fundamental Front-End Web Development",
-          link: "https://www.dicoding.com/certificates/MEPJVR344P3V",
-        },
-        {
-          name: "Create Front-End Web for Beginners",
-          link: "https://www.dicoding.com/certificates/2VX3Y55DNPYQ",
-        },
-        {
-          name: "Build Back-End Applications for Beginners",
-          link: "https://www.dicoding.com/certificates/72ZD93V26PYW",
-        },
-        {
-          name: "Basics of Web Programming",
-          link: "https://www.dicoding.com/certificates/QLZ9KGKJ9Z5D",
-        },
-        {
-          name: "Basics of JavaScript Programming",
-          link: "https://www.dicoding.com/certificates/2VX31QV23ZYQ",
-        },
-        {
-          name: "Computer Networking for Beginners",
-          link: "https://www.dicoding.com/certificates/EYX49QGVRPDL",
-        },
-        {
-          name: "Basics of DevOps",
-          link: "https://www.dicoding.com/certificates/QLZ926312X5D",
-        },
-        {
-          name: "Cloud Practitioner Essentials (Learning AWS Cloud Basics)",
-          link: "https://www.dicoding.com/certificates/ERZR0817QXYV",
+          name: "Red Hat System Administration I (RH124)",
+          link: "https://drive.google.com/file/d/19IM9CIKrqi3e8pC9D1PIJJ2mq0g1QXBa/view?usp=sharing",
         },
       ],
     },
     {
       type: "Course",
-      name: "Progate",
-      link: "https://progate.com/",
+      name: "Sistem Bootcamp",
+      link: "https://app.joinsistem.com/",
       certificate: [
         {
-          name: "React",
-          link: "https://drive.google.com/file/d/1b80zFNL9-Cc5jSKa2Hpkc_6l_NwsvOoP/view?usp=sharing",
+          name: "Project Manager ",
+          link: "https://drive.google.com/file/d/1tth7GhRSK892eByKC1QYhfqaVDX4k0mJ/view?usp=sharing",
         },
         {
-          name: "NodeJS",
-          link: "https://drive.google.com/file/d/1GydrUfjuYXyKf4PPa9xOfDS9Ag4RN03C/view?usp=sharing",
+          name: "DevOps level 1 ",
+          link: "https://drive.google.com/file/d/181NhkokgM0YMdBnvI-qZDg2TZK1ikMRU/view?usp=sharing",
         },
-        {
-          name: "Javascript",
-          link: "https://drive.google.com/file/d/1eVteeFTAeOZdjySVwk32LbsbipnBvCrd/view?usp=sharing",
-        },
-        {
-          name: "HTML & CSS",
-          link: "https://drive.google.com/file/d/1fZB2CwZ1c7UL_clMIuSp3W98NAavhBnJ/view?usp=sharing",
-        },
-      ],
-    },
-    {
-      type: "Competence",
-      name: "BNSP",
-      link: "https://www.bnsp.go.id",
-      certificate: [
-        {
-          name: "Junior Web Developer",
-          link: "https://www.linkedin.com/feed/update/urn:li:activity:7005734510378041344/",
+         {
+          name: "Fullstack Developer" ,
+          link: "https://drive.google.com/file/d/1U5nni0B6SMEz71VSDMPxoDjGpKAhSEUI/view?usp=sharing",
         },
       ],
     },
     {
       type: "Course",
-      name: "Sololearn",
-      link: "https://www.sololearn.com",
+      name: "Solutionlabs.Id",
+      link: "https://app.joinsistem.com/",
       certificate: [
         {
-          name: "HTML ",
-          link: "https://www.sololearn.com/certificates/CT-DJAJTAPO",
+          name: "Talent Evaluation level Beginner", 
+          link: "https://drive.google.com/file/d/1hVMBAc0N1kuk9_sdy4wfWDKRJrVrmK_-/view?usp=drive_link",
         },
         {
-          name: "Javascript ",
-          link: "https://www.sololearn.com/certificates/CT-VQKUFX6T",
+          name: "Talent Evaluation level Intermediate ",
+          link: "https://drive.google.com/file/d/19AesUBe-mGMxOOYz0OWqUQ0UmLb8hxwz/view?usp=drive_link",
+        },
+         {
+          name: "Talent Evaluation level Advanced ", 
+          link: "https://drive.google.com/file/d/1elWwVDJcGM49a-QSSHzlkz3WHeqKIZBR/view?usp=drive_link",
         },
       ],
     },
