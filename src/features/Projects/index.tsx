@@ -14,15 +14,14 @@ const Project: FC = () => {
         data-aos="zoom-in-up"
         data-aos-duration="300"
       >
-        Past Project Experience
+        Hands-on Project Experience
       </h1>
       <p
         className="text-center text-sm font-medium text-primary md:text-base"
         data-aos="fade-up"
         data-aos-duration="300"
       >
-        Explore how I consistently delivered maximum results in my previous
-        projects.
+        Learn how my past projects reflect a commitment to excellence and results.
       </p>
       <div data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
         <ProjectListProjectSection />
