@@ -16,7 +16,9 @@ import ceritain from "@images/ceritain.webp";
 import pinarak_resto from "@images/pinarak_resto.webp";
 import stunting from "@images/stunting.png";
 import beeGenius from "@images/bee-genius.png";
-
+import spideyKick from "@images/spidey-kick.png";
+import midgess from "@images/midgess.png";
+import silapar from "@images/silapar.png";
 
 // Gif Images
 import dapbundaGif from "@gif/dapbunda.gif";
@@ -30,6 +32,7 @@ import ceritainGif from "@gif/ceritain.gif";
 import pinarakrestoGif from "@gif/pinarak-resto.gif";
 import ICONS from "@/constants/icons";
 import { StaticImageData } from "next/image";
+import { sign } from "crypto";
 
 const tools = {
   Git: { name: "Git", src: ICONS.git, level: "Version control" },
@@ -159,7 +162,33 @@ const projects = [
     repo: "https://github.com/UtasPrasojo/bee-genius-apps",
     stack: "HTML, React, Tailwind, HeroUI, NextJS",
   },
-  
+  {
+    id: 3,
+    name: "Spidey-Kick",
+    desc: "Designed and developed an online marketplace website using native PHP, focusing on custom backend logic, user authentication, and product listing features without relying on third-party frameworks",
+    image: spideyKick,
+    web: "https://github.com/UtasPrasojo/spidey-kick-phpNative",
+    repo: "https://github.com/UtasPrasojo/spidey-kick-phpNative",
+    stack: "HTML, Php, Bootstrap, Css",
+  },
+  {
+    id: 4,
+    name: "Midgess Cam",
+    desc: "This project develops a smart agricultural field monitoring system by integrating the ESP32-CAM module with computer vision technologies using OpenCV and the YOLOv3 object detection model. The system is designed to detect and track birds in real-time to help prevent crop damage caused by pests. By leveraging the lightweight and low-cost ESP32-CAM for image capture and wireless data transmission, and processing the visual data with YOLOv3 via OpenCV, this solution provides a real-time, efficient, and scalable monitoring tool for farmers. The system can also be connected to a web-based interface for live streaming and alert notifications, supporting precision agriculture and enhancing field productivity.",
+    image: midgess,
+    web: "https://github.com/UtasPrasojo/BirdDetection-OpenCv",
+    repo: "https://github.com/UtasPrasojo/BirdDetection-OpenCv",
+    stack: "HTML, Php,Laravel, Bootstrap, Css, Yolo v3. Open Cv",
+  },
+  {
+    id: 5,
+    name: "Si Lapar",
+    desc: "Developed an online food ordering application using Flutter and Android Studio, allowing users to order food and have it delivered to their specified address.",
+    image: silapar,
+    web: "https://drive.google.com/file/d/1q-YMVgzHcupe7SIc8FfH8Qo4tjtX2EhP/view",
+    repo: "https://github.com/UtasPrasojo/silapar-cms-fe",
+    stack: "dart, html. css, flutter, Laravel, MySql, php",
+  },
 ];
 
 export { tools, stacks, projects };
