@@ -25,7 +25,8 @@ const GetInTouchSection: FC = () => {
         data-aos="flip-up"
         data-aos-duration="600"
       >
-        <a href="mailto:utasprasojo229@gmail.com">Say Hello</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=utasprasojo229@gmail.com" target="_blank" rel="noopener noreferrer">Say Hello</a>
+
       </button>
     </section>
   );

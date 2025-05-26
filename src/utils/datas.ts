@@ -42,8 +42,8 @@ const tools = {
   NPM: { name: "PNPM", src: ICONS.npm, level: "Depedencies manager" },
   VSCode: { name: "VSCode", src: ICONS.vscodeCodeEditor, level: "Code editor" },
   Figma: { name: "Figma", src: ICONS.figma, level: "UIUX Design tool" },
-  Blender: { name: "Blender", src: ICONS.blender, level: "3D software" },
-  Spline: { name: "Spline", src: ICONS.spline, level: "Web 3D design" },
+  // Blender: { name: "Blender", src: ICONS.blender, level: "3D software" },
+  // Spline: { name: "Spline", src: ICONS.spline, level: "Web 3D design" },
   Firebase: {
     name: "Firebase",
     src: ICONS.firebase,
@@ -75,12 +75,12 @@ interface IStack {
 const stacks: Record<string, IStack> = {
   HTML: { name: "HTML", src: ICONS.html5, level: "Expert" },
   CSS: { name: "CSS", src: ICONS.css3, level: "Expert" },
-  SASS: { name: "SASS", src: ICONS.sass, level: "Advanced" },
-  JS: { name: "Javascript", src: ICONS.js, level: "Expert" },
+  // SASS: { name: "SASS", src: ICONS.sass, level: "Advanced" },
+  JS: { name: "Javascript", src: ICONS.js, level: "Intermediate" },
   Typescript: {
     name: "Typescript",
     src: ICONS.typescriptTsLogo,
-    level: "Expert",
+    level: "Advanced",
   },
   // Styling / UI Frameworks
   Tailwind: { name: "TailwindCSS", src: ICONS.tailwind, level: "Expert" },
@@ -90,36 +90,36 @@ const stacks: Record<string, IStack> = {
     src: ICONS.materialUI,
     level: "Intermediate",
   },
-  Shadcn: { name: "Shadcn", src: ICONS.shadcn, level: "Expert" },
+  Shadcn: { name: "Shadcn", src: ICONS.shadcn, level: "Intermediate" },
 
   // 3. JavaScript Frameworks & Libraries
-  React: { name: "React", src: ICONS.react, level: "Expert" },
-  ReactNative: { name: "React Native", src: ICONS.react, level: "Advanced" },
-  NextJS: { name: "Next", src: ICONS.nextjs, level: "Expert" },
-  Vue: { name: "Vue", src: ICONS.vue, level: "Intermediate" },
-  ThreeJS: {
-    name: "ThreeJS",
-    src: ICONS.threejs,
-    level: "Intermediate",
-  },
-  Vite: { name: "Vite", src: ICONS.vite, level: "Advanced" },
-  Webpack: { name: "Webpack", src: ICONS.webpackBundler, level: "Advanced" },
-  Storybook: { name: "Storybook", src: ICONS.storybook, level: "Advanced" },
+  React: { name: "React", src: ICONS.react, level: "Intermediate" },
+  // ReactNative: { name: "React Native", src: ICONS.react, level: "Advanced" },
+  NextJS: { name: "Next", src: ICONS.nextjs, level: "Intermediate" },
+  Vue: { name: "Vue", src: ICONS.vue, level: "Expert" },
+  // ThreeJS: {
+  //   name: "ThreeJS",
+  //   src: ICONS.threejs,
+  //   level: "Intermediate",
+  // },
+  Vite: { name: "Vite", src: ICONS.vite, level: "Intermediate" },
+  // Webpack: { name: "Webpack", src: ICONS.webpackBundler, level: "Advanced" },
+  // Storybook: { name: "Storybook", src: ICONS.storybook, level: "Advanced" },
   ReactQuery: {
     name: "React Query",
     src: ICONS.reactQueryLogo,
-    level: "Expert",
+    level: "Beginer",
   },
 
   // 4. Backend / Fullstack Technologies
-  Express: { name: "Express", src: ICONS.express, level: "Advanced" },
-  HonoJs: { name: "Hono", src: ICONS.honoJs, level: "Expert" },
-  WebSocket: {
-    name: "WebSocket",
-    src: ICONS.websocket,
-    level: "Intermediate",
-  },
-  Laravel: { name: "Laravel", src: ICONS.laravel, level: "Intermediate" },
+  Express: { name: "Express", src: ICONS.express, level: "Beginer" },
+  // HonoJs: { name: "Hono", src: ICONS.honoJs, level: "Expert" },
+  // WebSocket: {
+  //   name: "WebSocket",
+  //   src: ICONS.websocket,
+  //   level: "Intermediate",
+  // },
+  Laravel: { name: "Laravel", src: ICONS.laravel, level: "Beginer" },
 
   // 5. Databases & ORMs
   PrismaORM: {
@@ -127,11 +127,11 @@ const stacks: Record<string, IStack> = {
     src: ICONS.prismaOrm,
     level: "Intermediate",
   },
-  DrizzleOrm: {
-    name: "Drizzle ORM",
-    src: ICONS.drizzleOrm,
-    level: "Advanced",
-  },
+  // DrizzleOrm: {
+  //   name: "Drizzle ORM",
+  //   src: ICONS.drizzleOrm,
+  //   level: "Advanced",
+  // },
 };
 
 const projects = [
