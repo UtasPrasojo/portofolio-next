@@ -1,8 +1,76 @@
-import type { FC } from "react";
+"use client"
 
-const HeaderSection: FC = () => {
+import { useEffect, useRef } from "react"
+import { animate, hover } from "motion"
+import { useMotionValue } from "motion/react"
+
+function splitText(element: HTMLElement) {
+  const text = element.textContent || ""
+  element.textContent = ""
+
+  const chars: HTMLElement[] = []
+
+  for (const char of text) {
+    const span = document.createElement("span")
+    span.textContent = char
+    span.className = "split-char"
+    element.appendChild(span)
+    chars.push(span)
+  }
+
+  return { chars }
+}
+
+const HeaderSection = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const velocityX = useMotionValue(0)
+  const velocityY = useMotionValue(0)
+  const prevEvent = useRef(0)
+
+  useEffect(() => {
+    if (!containerRef.current) return
+
+    const headings = containerRef.current.querySelectorAll("h1")
+
+    const handlePointerMove = (event: PointerEvent) => {
+      const now = performance.now()
+      const timeSinceLastEvent = (now - prevEvent.current) / 1000
+      prevEvent.current = now
+      velocityX.set(event.movementX / timeSinceLastEvent)
+      velocityY.set(event.movementY / timeSinceLastEvent)
+    }
+
+    document.addEventListener("pointermove", handlePointerMove)
+
+    headings.forEach((heading) => {
+      const { chars } = splitText(heading)
+
+      hover(chars, (element) => {
+        const speed = Math.sqrt(velocityX.get() ** 2 + velocityY.get() ** 2)
+        const angle = Math.atan2(velocityY.get(), velocityX.get())
+        const distance = speed * 0.1
+
+        animate(
+          element,
+          {
+            x: Math.cos(angle) * distance,
+            y: Math.sin(angle) * distance,
+          },
+          { type: "spring", stiffness: 100, damping: 50 }
+        )
+      })
+    })
+
+    return () => {
+      document.removeEventListener("pointermove", handlePointerMove)
+    }
+  }, [])
+
   return (
-    <section className="flex h-[80vh] w-full flex-col justify-center px-0 pt-44 leading-relaxed md:h-screen md:pt-16 lg:px-[70px] lg:pt-12 ">
+    <section
+      ref={containerRef}
+      className="flex h-[80vh] w-full flex-col justify-center px-0 pt-44 leading-relaxed md:h-screen md:pt-16 lg:px-[70px] lg:pt-12 "
+    >
       <p
         className="ml-1 hidden pb-3 text-sm text-accent md:block md:pb-7 md:text-base"
         data-aos="fade-up"
@@ -25,7 +93,12 @@ const HeaderSection: FC = () => {
         className="w-full text-sm leading-relaxed text-primary md:w-[640px] md:text-base"
         data-aos="zoom-in-up"
       >
-       I'm a software engineer with over three years of experience, including internships at several web development companies. I specialize in building modern web applications using Vue, Vite, TypeScript, and Next.js. Passionate about continuous learning, I strive to stay up-to-date with the latest technologies to grow both professionally and personally.
+        I'm a software engineer with over three years of experience,
+        including internships at several web development companies. I
+        specialize in building modern web applications using Vue, Vite,
+        TypeScript, and Next.js. Passionate about continuous learning, I
+        strive to stay up-to-date with the latest technologies to grow both
+        professionally and personally.
       </p>
       <div
         className="mt-10 text-sm md:mt-14"
@@ -41,8 +114,14 @@ const HeaderSection: FC = () => {
           <button>View my CV here!</button>
         </a>
       </div>
+      <style>{`
+        .split-char {
+          will-change: transform, opacity;
+          display: inline-block;
+        }
+      `}</style>
     </section>
-  );
-};
+  )
+}
 
-export default HeaderSection;
+export default HeaderSection

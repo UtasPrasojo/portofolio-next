@@ -1,8 +1,61 @@
-import type { FC } from "react";
+"use client"
+
+import { FC, useEffect, useRef } from "react"
+import { animate, stagger } from "motion"
+
+function splitText(element: HTMLElement) {
+  const text = element.textContent || ""
+  element.textContent = ""
+
+  const chars: HTMLElement[] = []
+
+  for (const char of text) {
+    const span = document.createElement("span")
+    span.textContent = char
+    span.className = "split-char"
+    element.appendChild(span)
+    chars.push(span)
+  }
+
+  return { chars }
+}
 
 const GetInTouchSection: FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    document.fonts.ready.then(() => {
+      if (!containerRef.current) return
+
+      const h1 = containerRef.current.querySelector("h1")
+      if (!h1) return
+
+      const { chars } = splitText(h1)
+
+      containerRef.current.style.visibility = "visible"
+
+      const staggerDelay = 0.15
+
+      animate(
+        chars,
+        { y: [-20, 20] },
+        {
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut",
+          duration: 2,
+          delay: stagger(staggerDelay, { startDelay: -staggerDelay * chars.length }),
+        }
+      )
+    })
+  }, [])
+
   return (
-    <section className="my-60 flex flex-col items-center justify-center gap-3 text-center md:gap-5">
+    <section
+      ref={containerRef}
+      className="my-60 flex flex-col items-center justify-center gap-3 text-center md:gap-5"
+      style={{ visibility: "hidden" }}
+    >
       <p className="font-mono text-accent" data-aos="fade-up">
         What{`'`}s Next?
       </p>
@@ -25,11 +78,23 @@ const GetInTouchSection: FC = () => {
         data-aos="flip-up"
         data-aos-duration="600"
       >
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=utasprasojo229@gmail.com" target="_blank" rel="noopener noreferrer">Say Hello</a>
-
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=utasprasojo229@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Say Hello
+        </a>
       </button>
-    </section>
-  );
-};
 
-export default GetInTouchSection;
+      <style>{`
+        .split-char {
+          will-change: transform, opacity;
+          display: inline-block;
+        }
+      `}</style>
+    </section>
+  )
+}
+
+export default GetInTouchSection
