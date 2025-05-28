@@ -20,6 +20,7 @@ import spideyKick from "@images/spidey-kick.png";
 import midgess from "@images/midgess.png";
 import silapar from "@images/silapar.png";
 import doctor from "@images/doctorPortal.png";
+import donkeyKong from "@images/donkeyKong.png";
 
 
 // Gif Images
@@ -199,6 +200,15 @@ const projects = [
     web: "https://github.com/UtasPrasojo/doctor-portal-java",
     repo: "https://github.com/UtasPrasojo/doctor-portal-java",
     stack: "java",
+  },
+    {
+    id: 6,
+    name: "Donkey Kong",
+    desc: "This project is a game developed using Unity, where the player controls the main character to reach the princess while overcoming various obstacles along the way.",
+    image: donkeyKong,
+    web: "https://github.com/UtasPrasojo/donkey-kong-gameDev",
+    repo: "https://github.com/UtasPrasojo/donkey-kong-gameDev",
+    stack: "c# unity",
   },
 ];
 
