@@ -21,6 +21,7 @@ import midgess from "@images/midgess.png";
 import silapar from "@images/silapar.png";
 import doctor from "@images/doctorPortal.png";
 import donkeyKong from "@images/donkeyKong.png";
+import siska from "@images/siska.jpeg";
 
 
 // Gif Images
@@ -209,6 +210,15 @@ const projects = [
     web: "https://github.com/UtasPrasojo/donkey-kong-gameDev",
     repo: "https://github.com/UtasPrasojo/donkey-kong-gameDev",
     stack: "c# unity",
+  },
+  {
+    id: 7,
+    name: "SISKA",
+    desc: "The SISKA (Student Softskills and Competence Information System)** website is a platform for recording students’ achievements, organizational involvement, seminars, and training activities. It enables lecturers to easily monitor students’ activeness and accomplishments in a structured and well-documented manner.",
+    image: siska,
+    web: "https://github.com/UtasPrasojo/siska-cms-fe",
+    repo: "https://github.com/UtasPrasojo/siska-cms-fev",
+    stack: "vue, vite, tailwindcss, naiveUI, nest, mysql",
   },
 ];
 
