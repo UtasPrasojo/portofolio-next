@@ -162,7 +162,7 @@ const projects = [
     name: "Bee-Genius",
     desc: "Performed maintenance and resolved bugs on a website for registration and scheduling of psychological consultations and therapy sessions, using Next.js and Tailwind CSS. Technologies used",
     image: beeGenius,
-    web: "https://github.com/UtasPrasojo/bee-genius-apps",
+    web: "https://beegenius.id/",
     repo: "https://github.com/UtasPrasojo/bee-genius-apps",
     stack: "HTML, React, Tailwind, HeroUI, NextJS",
   },
