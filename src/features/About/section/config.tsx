@@ -7,6 +7,53 @@ import {
 
 export const DATA_WORK_EXPERIENCE: IDATA_WORK_EXPERIENCE[] = [
   {
+    title: "Frontend Developer",
+    url: "https://gmedia.id/",
+    company: "PT.media Sarana Data",
+    date: "Nov 2025 - May 2026",
+    description: (
+      <ul className="list-inside list-disc">
+        <li>
+          ⁠Creating a webview with the perfect slicing method for response
+          insight using vue.js and tailwind css. Which will be displayed on
+          Android and iOS mobile devices. Mobile integration using InAppWebview.
+          Creating a psychological assessment to determine personality using
+          vue.js and integration with socket.io for real-time answer sending to
+          minimize answer loss when the connection is lost. Creating a dashboard
+          using Vue.js that will be used to monitor employees. Starting from
+          discipline statistics, monitoring the number of assessments, and
+          monitoring the discipline of each division.
+        </li>
+      </ul>
+    ),
+    techs: [
+      {
+        name: "Typescript",
+        icon: ICONS.typescriptTsLogo,
+      },
+      {
+        name: "Vite",
+        icon: ICONS.vite,
+      },
+      {
+        name: "TailwindCSS",
+        icon: ICONS.tailwind,
+      },
+      {
+        name: "Vue",
+        icon: ICONS.vue,
+      },
+      {
+        name: "TailwindCSS",
+        icon: ICONS.tailwind,
+      },
+      {
+        name: "Javascript",
+        icon: ICONS.javascript,
+      },
+    ],
+  },
+  {
     title: "Intern Frontend Developer",
     url: "https://d3ti.vokasi.uns.ac.id/",
     company: "D3TI - Universitas Sebelas Maret",
@@ -211,7 +258,6 @@ export const DATA_WORK_EXPERIENCE: IDATA_WORK_EXPERIENCE[] = [
         name: "Flutter",
         icon: ICONS.flutter,
       },
-     
     ],
   },
 ];
@@ -305,7 +351,7 @@ export const DATA_AWARDS: IDATA_AWARDS[] = [
           built a monitoring website for agricultural data using React.js. The
           target market for this tool is millennial farmers.
         </li>
-         <p>
+        <p>
           <a
             href="https://drive.google.com/file/d/1J5L8x3ODlnIWLhLq6SsWIzf4137mZgC9/view?usp=drive_link"
             target="_blank"
