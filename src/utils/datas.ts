@@ -22,7 +22,9 @@ import silapar from "@images/silapar.png";
 import doctor from "@images/doctorPortal.png";
 import donkeyKong from "@images/donkeyKong.png";
 import siska from "@images/siska.jpeg";
-
+import jenjang from "@images/jenjang.jpeg";
+import sukarela from "@images/sukarela.jpeg";
+import weather from "@images/forecasting.jpeg";
 
 // Gif Images
 import dapbundaGif from "@gif/dapbunda.gif";
@@ -193,7 +195,7 @@ const projects = [
     repo: "https://github.com/UtasPrasojo/silapar-cms-fe",
     stack: "dart, html. css, flutter, Laravel, MySql, php",
   },
-   {
+  {
     id: 5,
     name: "Doctor Portal",
     desc: "This project involves the development of a doctor data management website designed to streamline the scheduling and organization of medical professionals. The system allows administrators to efficiently manage doctors’ profiles, assign their working hours, and allocate consultation rooms. By centralizing this information in a user-friendly web interface, the platform enhances coordination within healthcare facilities, reduces scheduling conflicts, and supports better resource allocation for improved patient care.",
@@ -202,7 +204,7 @@ const projects = [
     repo: "https://github.com/UtasPrasojo/doctor-portal-java",
     stack: "java",
   },
-    {
+  {
     id: 6,
     name: "Donkey Kong",
     desc: "This project is a game developed using Unity, where the player controls the main character to reach the princess while overcoming various obstacles along the way.",
@@ -219,6 +221,33 @@ const projects = [
     web: "https://github.com/UtasPrasojo/siska-cms-fe",
     repo: "https://github.com/UtasPrasojo/siska-cms-fev",
     stack: "vue, vite, tailwindcss, naiveUI, nest, mysql",
+  },
+  {
+    id: 8,
+    name: "Jenjang",
+    desc: "Deep dive into your best potential through Jenjang's in-depth analysis - a platform designed to map out your personality and strengths. Level up Business, Education, and Personal development journey.",
+    image: jenjang,
+    web: "https://app.jenjang.com/",
+    // repo: "https://github.com/UtasPrasojo/siska-cms-fev",
+    stack: "vue, vite, tailwindcss, socketio",
+  },
+  {
+    id: 9,
+    name: "Sukarela",
+    desc: "Platform Para Sukarelawan, Buat Aktivitas dan Cari Relawan, Cari Aktivitas dan Jadi Relawan",
+    image: sukarela,
+    web: "https://sukarela.id/",
+    // repo: "https://github.com/UtasPrasojo/siska-cms-fev",
+    stack: "vue, vite, tailwindcss",
+  },
+  {
+    id: 10,
+    name: "Weather App",
+    desc: "Planing kegiatan mu disini, cuaca cerah hatipun ceria",
+    image: weather,
+    web: "https://github.com/UtasPrasojo/forecasting-weather-fe",
+    repo: "https://github.com/UtasPrasojo/forecasting-weather-be",
+    stack: "react, vite, tailwindcss, golang",
   },
 ];
 
