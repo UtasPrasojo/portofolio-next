@@ -5,10 +5,12 @@ import Image from "next/image";
 import { ImageSecret } from "@/constants/images";
 import { Dominos } from "@/components";
 import BlurText from "@/components/BlurText";
+import RollABallGame from "@/components/RollABallGame";
 
 const MainContent: FC = () => {
   return (
-    <section className="flex h-[650px] w-full flex-col items-center justify-center py-24 text-center ">
+    <section className="relative flex h-[650px] w-full flex-col items-center justify-center py-24 text-center ">
+      <RollABallGame />
       <div className="absolute mb-[-430px] mr-[10px] md:mb-[400px] md:mr-[200px] lg:mr-[300px] xl:mr-[480px]">
         <Image
           src={ImageSecret}

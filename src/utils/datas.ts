@@ -25,6 +25,7 @@ import siska from "@images/siska.jpeg";
 import jenjang from "@images/jenjang.jpeg";
 import sukarela from "@images/sukarela.jpeg";
 import weather from "@images/forecasting.jpeg";
+import university from "@images/university.png";
 
 // Gif Images
 import dapbundaGif from "@gif/dapbunda.gif";
@@ -248,6 +249,15 @@ const projects = [
     web: "https://github.com/UtasPrasojo/forecasting-weather-fe",
     repo: "https://github.com/UtasPrasojo/forecasting-weather-be",
     stack: "react, vite, tailwindcss, golang",
+  },
+    {
+    id: 11,
+    name: "Jenjang for University",
+    desc: "Discover Your Potential, Shape Your Future.",
+    image: university,
+    web: "https://stg.university.jenjang.appmedia.id/",
+    repo: "-",
+    stack: "vue, vite, tailwindcss, typescript",
   },
 ];
 

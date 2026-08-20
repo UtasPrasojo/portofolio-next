@@ -1,8 +1,10 @@
 import dynamic from "next/dynamic";
 
 export const ProjectListProjectSection = dynamic(
-  () => import("./ListProjectSection")
+  () => import("./ListProjectSection"),
+  { ssr: false }
 );
 export const ProjectGetInTouchSection = dynamic(
-  () => import("./GetInTouchSection")
+  () => import("./GetInTouchSection"),
+  { ssr: false }
 );

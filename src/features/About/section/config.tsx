@@ -7,9 +7,53 @@ import {
 
 export const DATA_WORK_EXPERIENCE: IDATA_WORK_EXPERIENCE[] = [
   {
+    title: "Software engineer",
+    url: "https://jenjang.com/",
+    company: "PT.Jenjang Talenta Indonesia",
+    date: "Jun 2026 - Present",
+    description: (
+      <ul className="list-inside list-disc">
+        <li>
+          Deploying an assessment repository with dynamic subdomains for
+          white-label needs. The service is already being used 2+ companies.
+          Successfully develop psychological assessment at jenjang app and
+          jenjang carrer and and is used by ±100.00 users. Successfully
+          developed a university dashboard for the Jenjang platform, which is
+          used to manage the nine box matrix, analyze cognitive profiles, and
+          track the distribution of student readiness by degree program across
+          the university. The focus was on presenting data in a structured and
+          interactive manner to support strategic decision-making.
+        </li>
+      </ul>
+    ),
+    techs: [
+      {
+        name: "Typescript",
+        icon: ICONS.typescriptTsLogo,
+      },
+      {
+        name: "Vite",
+        icon: ICONS.vite,
+      },
+      {
+        name: "TailwindCSS",
+        icon: ICONS.tailwind,
+      },
+      {
+        name: "Vue",
+        icon: ICONS.vue,
+      },
+      
+      {
+        name: "Javascript",
+        icon: ICONS.javascript,
+      },
+    ],
+  },
+  {
     title: "Frontend Developer",
     url: "https://gmedia.id/",
-    company: "PT.media Sarana Data",
+    company: "PT.Media Sarana Data",
     date: "Nov 2025 - May 2026",
     description: (
       <ul className="list-inside list-disc">
@@ -43,10 +87,7 @@ export const DATA_WORK_EXPERIENCE: IDATA_WORK_EXPERIENCE[] = [
         name: "Vue",
         icon: ICONS.vue,
       },
-      {
-        name: "TailwindCSS",
-        icon: ICONS.tailwind,
-      },
+      
       {
         name: "Javascript",
         icon: ICONS.javascript,
