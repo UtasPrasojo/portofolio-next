@@ -18,19 +18,22 @@ export default function RootLayout({ children }) {
 
   const superadmin = ["/auth/superadmin", "/dashboard/superadmin"];
 
+  const isV2 = pathname === "/v2" || pathname.startsWith("/v2/");
+  const hideLegacyChrome = isV2 || superadmin.includes(pathname);
+
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${roboto_mono.variable} scroll-smooth `}
+      className={`${poppins.variable} ${roboto_mono.variable} ${isV2 ? "" : "scroll-smooth"} `}
     >
       <head />
       <body>
-        {superadmin.includes(pathname) ? null : <Navbar />}
-        {superadmin.includes(pathname) ? null : <Contact />}
-        <main className={`${superadmin.includes(pathname) ? "" : "container"}`}>
+        {hideLegacyChrome ? null : <Navbar />}
+        {hideLegacyChrome ? null : <Contact />}
+        <main className={`${hideLegacyChrome ? "" : "container"}`}>
           {children}
         </main>
-        {superadmin.includes(pathname) ? null : <Footer />}
+        {hideLegacyChrome ? null : <Footer />}
       </body>
     </html>
   );
