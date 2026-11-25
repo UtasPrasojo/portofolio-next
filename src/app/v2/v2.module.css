@@ -99,7 +99,7 @@
   margin: auto;
   padding: 65px 7% 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
   position: relative;
   column-gap: 30px;
 }
@@ -187,12 +187,13 @@
 }
 .heroArt {
   position: relative;
-  min-height: 540px;
-  align-self: stretch;
+  width: min(100%, 470px);
+  aspect-ratio: 0.92;
+  align-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 36px;
+  margin: 0 auto 40px;
 }
 .heroArtLayer {
   position: absolute;
@@ -607,7 +608,7 @@
     display: none;
   }
   .heroArt {
-    min-height: 480px;
+    width: min(100%, 420px);
   }
   .artWord > span {
     font-size: 70px;
@@ -687,7 +688,6 @@
   .heroArt {
     width: 90%;
     max-width: 440px;
-    min-height: 440px;
     margin: 0 auto 35px;
   }
   .arch {

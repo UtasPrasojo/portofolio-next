@@ -462,9 +462,15 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(17, 27, 58, 0.55);
 }
 .projectCard > div:first-child {
   aspect-ratio: 1.65;
+  border: 0;
+  border-bottom: 1px solid var(--line);
 }
 .projectCard:hover img {
   filter: grayscale(0);
@@ -475,7 +481,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-top: 24px;
+  padding: 22px 24px 24px;
 }
 .projectTech {
   font-family: var(--font-roboto-mono), monospace;
