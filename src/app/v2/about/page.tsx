@@ -295,7 +295,17 @@ export default function AboutV2() {
             <div className={detail.toolGrid}>
               {Object.values(group.items).map((item) => (
                 <RevealCard className={detail.tool} key={item.name}>
-                  <Image src={item.src} alt="" width={32} height={32} />
+                  <Image
+                    src={item.src}
+                    alt=""
+                    width={32}
+                    height={32}
+                    className={
+                      item.name === "Express" || item.name === "Prisma ORM"
+                        ? detail.lightIcon
+                        : undefined
+                    }
+                  />
                   <div>
                     <span>{item.name}</span>
                     <small>

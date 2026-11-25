@@ -294,8 +294,10 @@
   margin-bottom: 20px;
 }
 .toolkit {
+  --line: rgba(255, 255, 255, 0.3);
+  --muted: #dce3ff;
   padding: 65px 7% 80px;
-  background: #15152e;
+  background-color: #0f0fe4;
   border-top: 1px solid var(--line);
 }
 .toolGroup {
@@ -326,6 +328,9 @@
   width: 32px;
   height: 32px;
   object-fit: contain;
+}
+.lightIcon {
+  filter: brightness(0) invert(1);
 }
 .tool span {
   font-size: 16px;
