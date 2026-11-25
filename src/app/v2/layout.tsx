@@ -1,10 +1,12 @@
 import type { ReactNode } from "react";
 import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
 import Navigation from "./_components/navigation";
+import AnimationSystem from "./_components/animation-system";
 import styles from "./v2.module.css";
 export default function V2Layout({ children }: { children: ReactNode }) {
   return (
-    <div className={styles.site} id="top">
+    <div className={`${styles.site} v2-site`} id="top">
+      <AnimationSystem />
       <a className={styles.skip} href="#content">
         Skip to content
       </a>
@@ -62,7 +64,7 @@ export default function V2Layout({ children }: { children: ReactNode }) {
         </div>
         <div className={styles.footerMeta}>
           <span>© {new Date().getFullYear()} UTAS PRASOJO</span>
-          <a href="/">Original portfolio</a>
+          <a href="/v1">Original portfolio</a>
           <a href="#top">Back to top</a>
         </div>
       </footer>

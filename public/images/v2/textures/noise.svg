@@ -14,6 +14,6 @@
       </feComponentTransfer>
     </filter>
   </defs>
-  <path d="M0 0h512v512H0z" filter="url(#mottle)" opacity=".08"/>
+  <path d="M0 0h512v512H0z" filter="url(#mottle)" opacity=".04"/>
   <path d="M0 0h512v512H0z" filter="url(#grain)" opacity=".13"/>
 </svg>

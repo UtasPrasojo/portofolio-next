@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${roboto_mono.variable} ${isV2 ? "" : "scroll-smooth"} `}
+      className={`${poppins.variable} ${roboto_mono.variable} scroll-smooth motion-reduce:scroll-auto`}
     >
       <head />
       <body>

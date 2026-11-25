@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
 import Image, { type StaticImageData } from "next/image";
+import { motion, useReducedMotion } from "motion/react";
 import { FiSearch, FiGithub } from "react-icons/fi";
 import styles from "../v2.module.css";
 import detail from "../pages.module.css";
@@ -34,6 +35,7 @@ function validUrl(value?: string) {
   return value && /^https?:\/\//.test(value) ? value : undefined;
 }
 export default function ProjectGallery({ projects }: { projects: Project[] }) {
+  const reducedMotion = useReducedMotion();
   const [filter, setFilter] = useState("All");
   const [query, setQuery] = useState("");
   const filtered = useMemo(
@@ -97,7 +99,15 @@ export default function ProjectGallery({ projects }: { projects: Project[] }) {
           const repo = validUrl(project.repo);
           const isRepository = web?.includes("github.com/");
           return (
-            <article className={detail.projectCard} key={project.name}>
+            <motion.article
+              className={detail.projectCard}
+              key={project.name}
+              initial={reducedMotion ? false : { opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              whileHover={reducedMotion ? undefined : { y: -6 }}
+              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            >
               <div className={styles.projectImage}>
                 <Image
                   src={project.image}
@@ -128,7 +138,7 @@ export default function ProjectGallery({ projects }: { projects: Project[] }) {
                   )}
                 </div>
               </div>
-            </article>
+            </motion.article>
           );
         })}
       </div>

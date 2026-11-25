@@ -30,3 +30,7 @@ Palet: navy `#0d0d24`, biru elektrik `#0000f2`, off-white `#f3f1e9`.
 - Pengalaman, organisasi, penghargaan: `src/features/About/section/config.tsx`.
 - Sertifikasi: `src/features/About/section/certifications.ts` (dipakai V1 dan V2).
 - Pendidikan: `src/features/About/section/education.ts`.
+
+## Gambar Home yang aktif
+
+Home sekarang memakai gambar yang diimpor langsung dari `hero/Frame 28.png` (hero), `hero/Frame 30.png` (banner dengan teks bawaan), dan `hero/Frame 31.png` (Apollo di section biru). Next.js mengoptimalkan gambar saat disajikan. Frame 31 dipotong secara visual melalui `object-fit: cover`, tanpa mengubah file asli. Untuk mengganti nama/lokasi aset Home, ubah import di `src/app/v2/page.tsx`.

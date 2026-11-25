@@ -10,6 +10,8 @@ import { DATA_CERTIFICATIONS } from "@/features/About/section/certifications";
 import { DATA_EDUCATION } from "@/features/About/section/education";
 import { stacks, tools } from "@/utils/datas";
 import { artwork } from "../_components/artwork";
+import ScrollPortrait from "../_components/scroll-portrait";
+import RevealCard from "../_components/reveal-card";
 import styles from "../v2.module.css";
 import detail from "../pages.module.css";
 
@@ -19,8 +21,6 @@ export const metadata: Metadata = {
     "The experience, education, and craft behind Utas Prasojo’s work. Software engineering, frontend development, and thoughtful digital experiences.",
 };
 
-// Legacy descriptions include fragments with bare list items. Render them as
-// paragraphs in the new editorial layout, preserving their text and links.
 function description(node: ReactNode): ReactNode {
   return Children.map(node, (child) => {
     if (!isValidElement<{ children?: ReactNode }>(child)) return child;
@@ -55,19 +55,16 @@ export default function AboutV2() {
             Explore my journey <span aria-hidden="true">＋</span>
           </a>
         </div>
-        <figure className={detail.portrait}>
-          <div className={detail.portraitFrame}>
-            <Image
-              src={artwork("about", "portrait") || "/images/utas.jpg"}
-              alt="Utas Prasojo"
-              fill
-              sizes="(max-width: 760px) 85vw, 40vw"
-              priority
-            />
-            <span aria-hidden="true">✦</span>
-          </div>
-          <figcaption>UTAS PRASOJO / SOFTWARE ENGINEER</figcaption>
-        </figure>
+        <ScrollPortrait>
+          <Image
+            src={artwork("about", "portrait") || "/images/utas.jpg"}
+            alt="Utas Prasojo"
+            fill
+            sizes="(max-width: 760px) 85vw, 40vw"
+            priority
+          />
+          <span aria-hidden="true">✦</span>
+        </ScrollPortrait>
       </section>
       <section className={detail.philosophy} aria-labelledby="craft-heading">
         <p className={styles.eyebrow}>CLARITY. CHARACTER. CARE.</p>
@@ -119,7 +116,11 @@ export default function AboutV2() {
             </h2>
             <div className={detail.timeline}>
               {DATA_WORK_EXPERIENCE.map((item, i) => (
-                <article className={detail.entry} key={`${item.company}-${i}`}>
+                <RevealCard
+                  as="article"
+                  className={detail.entry}
+                  key={`${item.company}-${i}`}
+                >
                   <p className={detail.date}>{item.date}</p>
                   <h3>{item.title}</h3>
                   <a
@@ -138,7 +139,7 @@ export default function AboutV2() {
                       <span key={tech.name}>{tech.name}</span>
                     ))}
                   </div>
-                </article>
+                </RevealCard>
               ))}
             </div>
           </section>
@@ -148,7 +149,11 @@ export default function AboutV2() {
               Always a <em>student.</em>
             </h2>
             {DATA_EDUCATION.map((item) => (
-              <article className={detail.entry} key={item.institution}>
+              <RevealCard
+                as="article"
+                className={detail.entry}
+                key={item.institution}
+              >
                 <p className={detail.date}>{item.date}</p>
                 <h3>{item.title}</h3>
                 {item.url ? (
@@ -168,7 +173,7 @@ export default function AboutV2() {
                     <p key={text}>{text}</p>
                   ))}
                 </div>
-              </article>
+              </RevealCard>
             ))}
           </section>
           <section id="organizations" className={detail.chapter}>
@@ -177,7 +182,11 @@ export default function AboutV2() {
               Beyond <em>the code.</em>
             </h2>
             {DATA_ORGANIZATION.map((item) => (
-              <article className={detail.entry} key={item.organization}>
+              <RevealCard
+                as="article"
+                className={detail.entry}
+                key={item.organization}
+              >
                 <p className={detail.date}>{item.date}</p>
                 <h3>{item.title}</h3>
                 <a
@@ -191,7 +200,7 @@ export default function AboutV2() {
                 <div className={detail.description}>
                   {description(item.description)}
                 </div>
-              </article>
+              </RevealCard>
             ))}
           </section>
           <section id="awards" className={detail.chapter}>
@@ -200,7 +209,8 @@ export default function AboutV2() {
               A little <em>recognition.</em>
             </h2>
             {DATA_AWARDS.map((item) => (
-              <article
+              <RevealCard
+                as="article"
                 className={`${detail.entry} ${detail.award}`}
                 key={item.organization}
               >
@@ -220,7 +230,7 @@ export default function AboutV2() {
                 <div className={detail.description}>
                   {description(item.description)}
                 </div>
-              </article>
+              </RevealCard>
             ))}
           </section>
           <section id="certifications" className={detail.chapter}>
@@ -284,7 +294,7 @@ export default function AboutV2() {
             <h3>{group.title}</h3>
             <div className={detail.toolGrid}>
               {Object.values(group.items).map((item) => (
-                <div className={detail.tool} key={item.name}>
+                <RevealCard className={detail.tool} key={item.name}>
                   <Image src={item.src} alt="" width={32} height={32} />
                   <div>
                     <span>{item.name}</span>
@@ -292,7 +302,7 @@ export default function AboutV2() {
                       {item.level === "Beginer" ? "Beginner" : item.level}
                     </small>
                   </div>
-                </div>
+                </RevealCard>
               ))}
             </div>
           </div>

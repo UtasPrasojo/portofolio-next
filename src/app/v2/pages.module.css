@@ -19,7 +19,7 @@
 }
 .aboutHero h1 em,
 .archiveHero h1 em {
-  color: #dbd6c4;
+  color: #ffffff;
 }
 .lead {
   font-size: 23px;
@@ -41,21 +41,54 @@
 }
 .portraitFrame {
   position: relative;
-  aspect-ratio: 4/5;
+  aspect-ratio: 1;
   border: 1px solid var(--line);
-  border-radius: 48% 48% 0 0;
+  border-radius: 0;
   padding: 18px;
-  background: #1b1b35;
+  background: #0000F2;
   overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 0 90px rgba(0, 47, 255, 0.27);
+  transform-origin: center;
+  will-change: transform;
 }
 .portraitFrame img {
   object-fit: cover;
-  filter: grayscale(1);
+  object-position: center 35%;
+  filter: grayscale(1) contrast(1.6) brightness(1.12);
   padding: 14px;
   border-radius: inherit;
 }
+.portraitFrame::before,
+.portraitFrame::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 14px;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.portraitFrame::before {
+  background: #0000f2;
+  mix-blend-mode: color;
+  opacity: 0.86;
+}
+.portraitFrame::after {
+  z-index: 2;
+  background-image: url("/images/v2/textures/noise.svg"),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(3, 4, 66, 0.65) 0 1px,
+      transparent 1px 3px
+    ),
+    radial-gradient(circle, rgba(2, 3, 80, 0.75) 0 0.65px, transparent 0.9px);
+  background-size: 256px 256px, auto, 3px 3px;
+  mix-blend-mode: multiply;
+  opacity: 0.48;
+}
 .portraitFrame > span {
   position: absolute;
+  z-index: 3;
   bottom: 20px;
   right: 24px;
   font-size: 60px;
@@ -102,12 +135,14 @@
   position: sticky;
   top: 30px;
   align-self: start;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 .sectionNav > p {
-  color: #c9c4ac;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 .sectionNav a {
@@ -122,8 +157,9 @@
 .journeyContent {
   min-width: 0;
 }
-.chapter {
+.journeyContent .chapter {
   margin-bottom: 75px;
+  scroll-margin-top: 65px;
 }
 .chapter:last-child {
   margin-bottom: 0;
@@ -144,7 +180,7 @@
 }
 .date {
   font-family: var(--font-roboto-mono), monospace;
-  color: #c9c4ac;
+  color: #ffffff;
   font-size: 13px;
   line-height: 1.7;
 }
@@ -199,7 +235,7 @@
   right: 0;
   top: 28px;
   font-size: 30px;
-  color: #c9c4ac;
+  color: #ffffff;
 }
 .certificate {
   border-top: 1px solid var(--line);
@@ -246,7 +282,7 @@
   border-top: 1px solid var(--line);
 }
 .certificate a:hover {
-  color: #c9c4ac;
+  color: #ffffff;
 }
 .linkLabel {
   display: block;
@@ -326,7 +362,7 @@
 .archiveIntro > span {
   font-size: 11px;
   letter-spacing: 1.5px;
-  color: #c9c4ac;
+  color: #ffffff;
   white-space: nowrap;
 }
 .archiveStar {
@@ -335,7 +371,7 @@
   top: 65px;
   font-size: 200px;
   line-height: 1;
-  color: #c9c4ac;
+  color: #ffffff;
   opacity: 0.12;
 }
 .gallery {
@@ -393,8 +429,8 @@
   outline: none;
 }
 .search:focus-within {
-  border-color: #c9c4ac;
-  outline: 1px solid #c9c4ac;
+  border-color: #ffffff;
+  outline: 1px solid #ffffff;
   outline-offset: 6px;
 }
 .search input::placeholder {
@@ -445,7 +481,7 @@
   font-family: var(--font-roboto-mono), monospace;
   font-size: 12px;
   line-height: 1.8;
-  color: #c9c4ac;
+  color: #ffffff;
 }
 .projectContent h2 {
   font-size: 35px;
@@ -474,7 +510,7 @@
   padding: 6px 0;
 }
 .projectLinks a:hover {
-  color: #c9c4ac;
+  color: #ffffff;
 }
 .projectLinks a > span {
   font-size: 22px;
@@ -486,7 +522,7 @@
 }
 .empty > span {
   font-size: 50px;
-  color: #c9c4ac;
+  color: #ffffff;
 }
 .empty h2 {
   font-size: 40px;
@@ -566,23 +602,32 @@
     padding: 40px 7%;
   }
   .sectionNav {
-    position: static;
+    position: sticky;
+    top: 0;
+    z-index: 5;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 8px;
-    margin-bottom: 45px;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 30px;
+    padding: 12px 0;
+    background: var(--navy);
   }
   .sectionNav > p {
-    width: 100%;
-    margin-bottom: 5px;
+    flex: 0 0 auto;
+    margin: auto 10px auto 0;
   }
   .sectionNav a {
+    flex: 0 0 auto;
     border: 1px solid var(--line);
     padding: 10px 13px;
     font-size: 13px;
   }
-  .chapter {
+  .journeyContent .chapter {
     margin-bottom: 50px;
+    scroll-margin-top: 100px;
   }
   .entry h3 {
     font-size: 24px;

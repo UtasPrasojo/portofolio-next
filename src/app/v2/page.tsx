@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { artwork, Celestial } from "./_components/artwork";
+import bannerImage from "@images/v2/hero/Frame 30.png";
+import apolloImage from "@images/v2/hero/Frame 31.png";
+import HeroArtwork from "./_components/hero-artwork";
+import RevealCard from "./_components/reveal-card";
+import { artwork } from "./_components/artwork";
 import styles from "./v2.module.css";
 
 export const metadata: Metadata = {
@@ -8,47 +12,6 @@ export const metadata: Metadata = {
   description:
     "Software engineer crafting thoughtful digital experiences with Vue, React, TypeScript, and Next.js. Explore selected work by Utas Prasojo.",
 };
-
-function Temple() {
-  return (
-    <svg
-      viewBox="0 0 1200 420"
-      fill="none"
-      aria-hidden="true"
-      className={styles.temple}
-    >
-      <g stroke="currentColor" strokeWidth="1">
-        {Array.from({ length: 25 }, (_, i) => (
-          <path key={i} d={`M600 65 L${i * 50} 420`} opacity=".18" />
-        ))}
-        <circle cx="600" cy="190" r="132" opacity=".3" />
-        <circle cx="600" cy="190" r="155" opacity=".2" />
-        {[85, 895].map((x) => (
-          <g key={x}>
-            <path
-              d={`M${x} 175l110-80 110 80Zm-8 13h236v15H${
-                x - 8
-              }Zm0 173h236v16H${x - 8}Zm-15 22h266v15H${x - 23}Z`}
-            />
-            {[0, 1, 2, 3].map((i) => (
-              <g key={i}>
-                <path d={`M${x + 12 + i * 56} 207h27v149h-27z`} />
-                {[6, 13, 20].map((n) => (
-                  <path
-                    key={n}
-                    d={`M${x + 12 + i * 56 + n} 212v139`}
-                    opacity=".5"
-                  />
-                ))}
-              </g>
-            ))}
-          </g>
-        ))}
-        <path d="M0 405h1200M0 412h1200" />
-      </g>
-    </svg>
-  );
-}
 
 const selectedProjects = [
   {
@@ -84,9 +47,6 @@ const selectedProjects = [
 ];
 
 export default function PortfolioV2() {
-  const hero = artwork("hero", "statue");
-  const banner = artwork("banner", "olympus");
-  const emblem = artwork("emblem", "apollo");
   return (
     <>
       <section className={styles.hero} id="intro" aria-labelledby="hero-title">
@@ -113,42 +73,9 @@ export default function PortfolioV2() {
             <a href="/v2/projects" className={styles.primaryButton}>
               Explore my work
             </a>
-            <a
-              href="https://drive.google.com/drive/folders/1IjCBhzgYSWyzRJ5Yke-g_iTrIoKSiK8p?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.textButton}
-            >
-              View my CV <span aria-hidden="true">＋</span>
-            </a>
           </div>
         </div>
-        <div className={styles.heroArt}>
-          <div className={styles.arch} />
-          <Celestial />
-          {hero ? (
-            <Image
-              className={styles.statue}
-              src={hero}
-              alt="Classical Greek sculpture"
-              fill
-              sizes="(max-width: 760px) 90vw, 50vw"
-              priority
-              unoptimized
-            />
-          ) : (
-            <div className={styles.artWord} aria-hidden="true">
-              <span>τέχνη</span>
-              <small>THE ART OF MAKING</small>
-            </div>
-          )}
-          <span className={styles.artCorner} aria-hidden="true">
-            ✦
-          </span>
-          <p className={styles.artCaption}>
-            ANCIENT INSPIRATION. MODERN CREATION.
-          </p>
-        </div>
+        <HeroArtwork />
         <div className={styles.heroBottom}>
           <span>BUILT WITH INTENTION</span>
           <span>
@@ -158,25 +85,16 @@ export default function PortfolioV2() {
         </div>
       </section>
 
-      <section className={styles.manifesto} aria-label="Design philosophy">
-        <div className={styles.manifestoArt}>
-          {banner ? (
-            <Image src={banner} alt="" fill sizes="100vw" unoptimized />
-          ) : (
-            <Temple />
-          )}
-        </div>
-        <div className={styles.manifestoCopy}>
-          <span className={styles.eyebrow}>WHERE CRAFT MEETS CODE</span>
-          <h2>
-            Timeless inspiration.
-            <br />
-            <em>Seamless experiences.</em>
-          </h2>
-          <span className={styles.manifestoStar} aria-hidden="true">
-            ✦
-          </span>
-        </div>
+      <section
+        className={styles.illustratedBanner}
+        aria-label="Design philosophy"
+      >
+        <Image
+          src={bannerImage}
+          alt="Classical celestial illustration: Crafting seamless, modern and intuitive web experiences."
+          sizes="(max-width: 760px) 86vw, 1190px"
+          className={styles.bannerImage}
+        />
       </section>
 
       <section
@@ -185,17 +103,12 @@ export default function PortfolioV2() {
         aria-labelledby="about-title"
       >
         <div className={styles.aboutEmblem}>
-          {emblem ? (
-            <Image
-              src={emblem}
-              alt="Apollo sculpture"
-              width={200}
-              height={200}
-              unoptimized
-            />
-          ) : (
-            <Celestial small />
-          )}
+          <Image
+            src={apolloImage}
+            alt="Apollo sculpture with a radiant sun crown"
+            fill
+            sizes="(max-width: 760px) 520px, 720px"
+          />
         </div>
         <p className={styles.eyebrow}>THE MIND BEHIND THE WORK</p>
         <h2 id="about-title">
@@ -234,31 +147,35 @@ export default function PortfolioV2() {
         </div>
         <div className={styles.projects}>
           {selectedProjects.map((project) => (
-            <a
-              className={styles.project}
-              href={project.href}
-              key={project.slug}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`Visit ${project.name} (opens in a new tab)`}
-            >
-              <div className={styles.projectImage}>
-                <Image
-                  src={artwork("projects", project.slug) || project.image}
-                  alt={`${project.name} website preview`}
-                  fill
-                  sizes="(max-width: 760px) 90vw, 32vw"
-                />
-                <span className={styles.projectOverlay}>Explore project</span>
-              </div>
-              <p className={styles.projectCategory}>{project.category}</p>
-              <h3>
-                {project.name}
-                <span aria-hidden="true">＋</span>
-              </h3>
-              <p className={styles.projectDescription}>{project.description}</p>
-              <p className={styles.projectStack}>{project.stack}</p>
-            </a>
+            <RevealCard key={project.slug}>
+              <a
+                className={styles.project}
+                href={project.href}
+                key={project.slug}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Visit ${project.name} (opens in a new tab)`}
+              >
+                <div className={styles.projectImage}>
+                  <Image
+                    src={artwork("projects", project.slug) || project.image}
+                    alt={`${project.name} website preview`}
+                    fill
+                    sizes="(max-width: 760px) 90vw, 32vw"
+                  />
+                  <span className={styles.projectOverlay}>Explore project</span>
+                </div>
+                <p className={styles.projectCategory}>{project.category}</p>
+                <h3>
+                  {project.name}
+                  <span aria-hidden="true">＋</span>
+                </h3>
+                <p className={styles.projectDescription}>
+                  {project.description}
+                </p>
+                <p className={styles.projectStack}>{project.stack}</p>
+              </a>
+            </RevealCard>
           ))}
         </div>
       </section>
